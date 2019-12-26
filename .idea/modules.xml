@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RO_Graph_Theory.iml" filepath="$PROJECT_DIR$/RO_Graph_Theory.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ro_graph_theory/ro_graph_theory.iml" filepath="$PROJECT_DIR$/ro_graph_theory/ro_graph_theory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ro_graph_theory/graph_theory.iml" filepath="$PROJECT_DIR$/ro_graph_theory/graph_theory.iml" />
     </modules>
   </component>
 </project>

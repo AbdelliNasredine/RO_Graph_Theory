@@ -19,9 +19,8 @@ public class Graph {
 
     @Override
     public String toString() {
-        return "Graph{" +
-                "\tX=" + X +
-                "\n\tU=" + U +
-                "\n}";
+        return "Graph" +
+                "\n\tX=" + X +
+                "\n\tU=" + U;
     }
 }

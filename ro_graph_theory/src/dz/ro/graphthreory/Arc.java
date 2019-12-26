@@ -24,4 +24,9 @@ public class Arc {
     public void setSommetFin(Sommet s2){
         this.s2 = s2;
     }
+
+    @Override
+    public String toString() {
+        return "("+s1.get()+","+s2.get()+")";
+    }
 }

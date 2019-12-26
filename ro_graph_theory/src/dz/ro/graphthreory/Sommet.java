@@ -14,4 +14,9 @@ public class Sommet {
     public void set(int valeur) {
         this.valeur = valeur;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(valeur);
+    }
 }
