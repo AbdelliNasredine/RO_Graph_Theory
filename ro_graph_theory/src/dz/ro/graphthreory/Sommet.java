@@ -19,4 +19,9 @@ public class Sommet {
     public String toString() {
         return String.valueOf(valeur);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return ((Sommet)obj).get() == this.valeur;
+    }
 }
