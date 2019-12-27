@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
 
-    public static Graph init(){
+    public static GraphOriente init(){
         /* Sommets */
         Sommet s1 = new Sommet(1);
         Sommet s2 = new Sommet(2);
@@ -20,15 +20,18 @@ public class Main {
         /* U et X */
         List<Sommet> X = new ArrayList<Sommet>(){{ add(s1);add(s2);add(s3);add(s4); }};
         List<Arc> U = new ArrayList<Arc>() {{ add(arc1);add(arc2);add(arc3);add(arc4);add(arc5); }};
-        return new Graph(X,U);
+        return new GraphOriente(X,U);
     }
 
     public static void main(String[] args) {
-        Graph g = init();
+        GraphOriente go = init();
         // aff le graph
-        System.out.println(g.toString());
+        System.out.println(go.toString());
 
         // aff list succ/pred/adjs
-        g.printSuccPredAdjsList();
+        go.printSuccPredAdjsList();
+
+        // aff degré/s_d_interieur/s_d_exterieur
+        go.printSDegIntExt();
     }
 }
