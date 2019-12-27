@@ -1,4 +1,4 @@
-package dz.ro.graphthreory;
+package dz.ro.graphthreory.graph;
 
 public class Arc {
     private Sommet s1;

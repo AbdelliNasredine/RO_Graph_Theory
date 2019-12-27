@@ -1,10 +1,21 @@
 package dz.ro.graphthreory;
 
+import dz.ro.graphthreory.graph.Arc;
+import dz.ro.graphthreory.graph.GraphOriente;
+import dz.ro.graphthreory.graph.Sommet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+/**
+ * Class Main_1:
+ * exectuter cette class pour voir les suivantes:
+ * - Graph (list des sommet/arc)
+ * - Succeseur ,Prédécesseur, Sommets adjacents
+ * - Semi degré Interieur, Semi degré Interieur, Degré
+ */
+public class Main_1 {
 
+    /* initialisation de graph (les sommets / les arcs) */
     public static GraphOriente init(){
         /* Sommets */
         Sommet s1 = new Sommet(1);
@@ -25,7 +36,7 @@ public class Main {
 
     public static void main(String[] args) {
         GraphOriente go = init();
-        // aff le graph
+        // aff graph
         System.out.println(go.toString());
 
         // aff list succ/pred/adjs

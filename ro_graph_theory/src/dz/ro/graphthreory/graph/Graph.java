@@ -1,4 +1,4 @@
-package dz.ro.graphthreory;
+package dz.ro.graphthreory.graph;
 
 import java.util.ArrayList;
 import java.util.List;
