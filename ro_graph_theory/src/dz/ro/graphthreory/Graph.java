@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Graph {
-    private List<Sommet> X;
-    private List<Arc> U;
+    // X = List des sommets
+    public List<Sommet> X;
+    // U = List des arc
+    public List<Arc> U;
 
     public Graph() {
         this.X = new ArrayList<Sommet>();
@@ -17,10 +19,14 @@ public class Graph {
         U = u;
     }
 
+    public int getOrdre(){
+        return X.size();
+    }
+
     public List<Sommet> succOf(Sommet sommet) {
         List<Sommet> succ_List = new ArrayList<Sommet>();
         for(Arc arc : U) {
-            if(arc.getSommetDebut().equals(sommet))
+            if(!succ_List.contains(arc.getSommetFin()) && arc.getSommetDebut().equals(sommet))
                 succ_List.add(arc.getSommetFin());
         }
         return succ_List;
@@ -29,7 +35,7 @@ public class Graph {
     public List<Sommet> predOf(Sommet sommet) {
         List<Sommet> pred_List = new ArrayList<Sommet>();
         for(Arc arc : U) {
-            if(arc.getSommetFin().equals(sommet))
+            if(!pred_List.contains(arc.getSommetDebut()) && arc.getSommetFin().equals(sommet))
                 pred_List.add(arc.getSommetDebut());
         }
         return pred_List;
@@ -44,10 +50,20 @@ public class Graph {
         return adjs_List;
     }
 
+    public void printSuccPredAdjsList(){
+        for(Sommet s : X){
+            System.out.println(s.toString());
+            System.out.print("\tSucc="+succOf(s).toString());
+            System.out.print("\n\tPred="+predOf(s).toString());
+            System.out.println("\n\tAdjs="+adjs(s).toString());
+        }
+    }
+
     @Override
     public String toString() {
         return "Graph" +
-                "\n\tX=" + X +
-                "\n\tU=" + U;
+                "\n\tX= " + X +
+                "\n\tU= " + U +
+                "\n\tOrder= " + getOrdre();
     }
 }

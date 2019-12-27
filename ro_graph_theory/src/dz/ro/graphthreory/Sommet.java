@@ -17,7 +17,7 @@ public class Sommet {
 
     @Override
     public String toString() {
-        return String.valueOf(valeur);
+        return "S"+valeur;
     }
 
     @Override

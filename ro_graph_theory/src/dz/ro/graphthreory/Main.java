@@ -25,6 +25,10 @@ public class Main {
 
     public static void main(String[] args) {
         Graph g = init();
+        // aff le graph
         System.out.println(g.toString());
+
+        // aff list succ/pred/adjs
+        g.printSuccPredAdjsList();
     }
 }

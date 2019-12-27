@@ -27,6 +27,6 @@ public class Arc {
 
     @Override
     public String toString() {
-        return "("+s1.get()+","+s2.get()+")";
+        return "("+s1.toString()+","+s2.toString()+")";
     }
 }
