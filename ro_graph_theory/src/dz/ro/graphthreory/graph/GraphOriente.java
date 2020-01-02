@@ -39,6 +39,27 @@ public class GraphOriente extends Graph{
         return adjs_List;
     }
 
+    private List<Sommet> getListSommetNoNMarque(ArrayList<List<Sommet>> pred) {
+        List<Sommet> l = new ArrayList<Sommet>();
+        for (List<Sommet> p : pred) {
+            //if(p.isEmpty())
+        }
+        return l;
+    }
+
+    public List<Sommet> enNiveaux() {
+        int niveau = 0;
+        List<Sommet> list_sommet_niveau = new ArrayList<>();
+        ArrayList<List<Sommet>> list_pred = new ArrayList<List<Sommet>>();
+        for (Sommet s : X) {
+            list_pred.add(predOf(s));
+        }
+        while (!list_pred.isEmpty()) {
+            List<Sommet> list_sommet_non_marque;
+        }
+        return list_sommet_niveau;
+    }
+
     public int demiDegInter(Sommet sommet){
         return succOf(sommet).size();
     }

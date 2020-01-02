@@ -2,6 +2,7 @@ package dz.ro.graphthreory.graph;
 
 public class Sommet {
     private int valeur;
+    private int niveau;
 
     public Sommet(int valeur){
         this.valeur = valeur;
@@ -13,6 +14,14 @@ public class Sommet {
 
     public void set(int valeur) {
         this.valeur = valeur;
+    }
+
+    public int getNiveau() {
+        return niveau;
+    }
+
+    public void setNiveau(int niveau) {
+        this.niveau = niveau;
     }
 
     @Override
