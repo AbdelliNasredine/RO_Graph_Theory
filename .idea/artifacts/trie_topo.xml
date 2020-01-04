@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="trie_topo">
+    <output-path>$PROJECT_DIR$/out/artifacts/trie_topo</output-path>
+    <root id="archive" name="trie_topo.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/ro_graph_theory/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

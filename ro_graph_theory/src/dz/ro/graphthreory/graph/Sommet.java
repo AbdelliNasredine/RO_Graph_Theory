@@ -2,35 +2,40 @@ package dz.ro.graphthreory.graph;
 
 public class Sommet {
     private int valeur;
-    private int niveau;
+    public int niveau = 0;
+    private int degreInter = 0;
 
     public Sommet(int valeur){
         this.valeur = valeur;
     }
 
-    public int get(){
+    public int getValeur() {
         return valeur;
     }
 
-    public void set(int valeur) {
-        this.valeur = valeur;
+    public void incrementDegreInter() {
+        degreInter++;
     }
 
-    public int getNiveau() {
-        return niveau;
+    public void decrementDegreInter() {
+        degreInter--;
     }
 
-    public void setNiveau(int niveau) {
-        this.niveau = niveau;
+    public int getDegreInter() {
+        return degreInter;
+    }
+
+    public void print() {
+        System.out.println(this.toString() + "\t|" + degreInter + "|\t|" + niveau + "|");
     }
 
     @Override
     public String toString() {
-        return "S"+valeur;
+        return "S" + (valeur + 1);
     }
 
     @Override
     public boolean equals(Object obj) {
-        return ((Sommet)obj).get() == this.valeur;
+        return ((Sommet) obj).getValeur() == this.valeur;
     }
 }
